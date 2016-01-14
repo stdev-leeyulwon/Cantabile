@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="false"
+    tools:context=".IntroActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/london_small5"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC34495e">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="64dp"
+            android:src="@drawable/logo_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.60"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="72dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/signup"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#44FFFFFF"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/signin"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#44FFFFFF"
+                android:text="@string/sign_in"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

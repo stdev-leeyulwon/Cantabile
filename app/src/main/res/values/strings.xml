@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name" translatable="false">Cantabile</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main" translatable="false">Main</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_my_song" translatable="false">MySong</string>
+    <string name="license" translatable="false">The \'less-than\' sign logo and the design assets are protected by Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="email">Email</string>
+    <string name="pw">Password</string>
+    <string name="login">Login</string>
+    <string name="nick">Nickname</string>
+    <string name="register">Register</string>
+    <string name="song_name">What is the name of this song?</string>
+    <string name="navd_piano">Piano</string>
+    <string name="navd_network">Network</string>
+    <string name="navd_mine">My song</string>
+    <string name="navd_info">Info</string>
+    <string name="exit">Press back once more to exit</string>
+    <string name="wait">Please wait</string>
+    <string name="rec_start">Recording Start</string>
+    <string name="rec_stop">Recording Stop</string>
+    <string name="save">SAVE</string>
+</resources>

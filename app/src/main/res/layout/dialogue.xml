@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root" android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:padding="16dp">
+
+    <TextView android:text="@string/song_name" android:id="@+id/Name"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+    <EditText android:id="@+id/name_et" android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

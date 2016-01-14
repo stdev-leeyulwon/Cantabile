@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">설정</string>
+    <string name="navigation_drawer_close">네비게이션 드로워 닫기</string>
+    <string name="navigation_drawer_open">네비게이션 드로워 열기</string>
+    <string name="email">이메일</string>
+    <string name="login">로그인</string>
+    <string name="nick">닉네임</string>
+    <string name="pw">비밀번호</string>
+    <string name="register">등록</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">등록</string>
+    <string name="song_name">노래의 제목을 입력하세요</string>
+    <string name="navd_info">정보</string>
+    <string name="navd_mine">내 노래</string>
+    <string name="navd_network">네트워크</string>
+    <string name="navd_piano">피아노</string>
+    <string name="exit">뒤로가기 버튼을 한번 더 누르면 종료됩니다.</string>
+    <string name="wait">잠시만 기다려주세요</string>
+    <string name="save">저장</string>
+    <string name="rec_start">녹음 시작</string>
+    <string name="rec_stop">녹음 중지</string>
+</resources>

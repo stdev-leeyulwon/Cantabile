@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item android:id="@+id/piano" android:icon="@drawable/ic_music_note_black_24dp"
+            android:title="@string/navd_piano" />
+
+        <item android:id="@+id/network" android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/navd_network" />
+
+        <item android:id="@+id/mine" android:icon="@drawable/ic_queue_music_black_24dp"
+            android:title="@string/navd_mine" />
+    </group>
+
+    <item android:id="@+id/info" android:icon="@drawable/ic_info_black_24dp_2x"
+        android:title="@string/navd_info" />
+
+</menu>

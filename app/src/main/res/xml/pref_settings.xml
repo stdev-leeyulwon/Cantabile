@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/app_name">
+        <Preference
+            android:key="0.0.1"
+            android:summary="alpha build"
+            android:title="rev.5 0.0.1 alpha"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Staffs">
+
+        <Preference
+            android:summary="develop, design, plan"
+            android:title="이율원">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://twitter.com/Override_STDEV" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

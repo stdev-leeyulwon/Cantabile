@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="net.override.cantabile.SignupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/london_small5"
+            android:scaleType="centerCrop"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#CC34495e"
+            android:id="@+id/FL" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:padding="75dp"
+                android:src="@drawable/signup"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:padding="32dp"
+        android:layout_below="@id/RL">
+
+        <TextView
+            android:paddingTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nick"
+            android:id="@+id/nickname" />
+
+
+        <EditText
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="20"
+            android:id="@+id/nickname_et"
+            android:layout_below="@+id/nickname"/>
+
+        <TextView
+            android:paddingTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:layout_below="@id/nickname_et"
+            android:id="@+id/email" />
+
+
+        <EditText
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:ems="20"
+            android:id="@+id/email_et"
+            android:layout_below="@+id/email"/>
+
+        <TextView
+            android:paddingTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pw"
+            android:layout_below="@+id/email_et"
+            android:id="@+id/password" />
+
+        <EditText
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/password_et"
+            android:layout_below="@+id/password"
+            android:layout_alignEnd="@+id/register_btn"
+            android:layout_alignRight="@+id/register_btn"/>
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:id="@+id/register_btn"
+            android:layout_below="@+id/password_et"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
