@@ -34,4 +34,7 @@
     <string name="signupdialogue">Signing Up</string>
     <string name="error_dialogue">Error</string>
     <string name="error_dialogue_summary">Please chack your network and try again</string>
+    <string name="remove">REMOVE</string>
+    <string name="share">SHARE</string>
+    <string name="download">DOWNLOAD</string>
 </resources>

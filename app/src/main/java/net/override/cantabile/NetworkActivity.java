@@ -9,11 +9,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class NetworkActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ArrayList<HashMap<String, String>> networklist = new ArrayList<HashMap<String, String>>();
+    ListView lv;
     TextView nick, email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +31,24 @@ public class NetworkActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+
+        lv = (ListView)findViewById(R.id.mylist);
+        SimpleAdapter adapter = new SimpleAdapter(this, networklist, R.layout.network_content_item,new String [] {"name","duration"}, new int[] {R.id.songname,R.id.songduration});
+
+        makelist("Addicted To A Memory", "05:03");
+        makelist("I Want You To Know", "04:00");
+        makelist("Beautiful Now", "03:38");
+        makelist("Transmission", "04:02");
+        makelist("Done With Love", "04:56");
+        makelist("True Colors", "03:48");
+        makelist("Straight Into The Fire", "03:42");
+        makelist("Papercut", "07:23");
+        makelist("Bumble Bee", "04:08");
+        makelist("Daisy", "02:55");
+        makelist("Illusion", "06:26");
+
+        lv.setAdapter(adapter);
+        lv.setDividerHeight(0);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,6 +80,14 @@ public class NetworkActivity extends AppCompatActivity
         }
         mBackPressed = System.currentTimeMillis();
 
+    }
+
+    public void makelist(String N, String D){
+        HashMap<String, String> tmp = new HashMap<String, String>();
+        tmp = new HashMap();
+        tmp.put("name", N);
+        tmp.put("duration", D);
+        networklist.add(tmp);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

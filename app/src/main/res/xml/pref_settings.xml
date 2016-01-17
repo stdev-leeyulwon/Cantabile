@@ -2,18 +2,27 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/app_name">
+
         <Preference
-            android:key="0.0.1"
-            android:summary="alpha build"
-            android:title="rev.5 0.0.1 alpha"/>
+            android:key="version"
+            android:summary="@string/ver_code"
+            android:title="@string/version"/>
+
+        <Preference
+            android:summary="cantabile31415@gmail.com"
+            android:title="@string/usersupport">
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:cantabile31415@gmail.com" />
+        </Preference>
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Staffs">
+    <PreferenceCategory android:title="@string/staff">
 
         <Preference
-            android:summary="develop, design, plan"
-            android:title="이율원">
+            android:summary="@string/info_override_summary"
+            android:title="@string/info_override">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="http://twitter.com/Override_STDEV" />
