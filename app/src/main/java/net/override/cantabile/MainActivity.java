@@ -166,14 +166,15 @@ public class MainActivity extends AppCompatActivity
             finish();
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         } else if (id == R.id.network) {
-
+            Intent intent = new Intent(MainActivity.this, NetworkActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            finish();
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         } else if (id == R.id.info) {
             Intent intent = new Intent(MainActivity.this, InfoActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-        } else if (id == R.id.piano) {
-
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -255,16 +256,16 @@ public class MainActivity extends AppCompatActivity
                  * 여기를 활성화 시키면 음이 너무 끊어져서 듣기 거북하다
                  */
 
-			//	if(upPointerIndex==0){
-			//		if(sKey0>0) sPool.stop(sKey0);
-			//		sKey0 = 0;
-			//	}else if(upPointerIndex==1){
-			//		if(sKey1>0) sPool.stop(sKey1);
-			//		sKey1 = 0;
-			//	}else if(upPointerIndex==2){
-			//		if(sKey2>0) sPool.stop(sKey2);
-			//		sKey2 = 0;
-			//	}
+                //	if(upPointerIndex==0){
+                //		if(sKey0>0) sPool.stop(sKey0);
+                //		sKey0 = 0;
+                //	}else if(upPointerIndex==1){
+                //		if(sKey1>0) sPool.stop(sKey1);
+                //		sKey1 = 0;
+                //	}else if(upPointerIndex==2){
+                //		if(sKey2>0) sPool.stop(sKey2);
+                //		sKey2 = 0;
+                //	}
 
             }
 

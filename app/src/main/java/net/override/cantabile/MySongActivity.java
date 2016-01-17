@@ -9,8 +9,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,7 +25,7 @@ public class MySongActivity extends AppCompatActivity
 
     ArrayList<HashMap<String, String>> songlist = new ArrayList<HashMap<String, String>>();
     ListView lv;
-
+    TextView nick, email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +34,18 @@ public class MySongActivity extends AppCompatActivity
         lv = (ListView)findViewById(R.id.mylist);
         SimpleAdapter adapter = new SimpleAdapter(this, songlist, R.layout.mysong_content_item,new String [] {"name","duration"}, new int[] {R.id.songname,R.id.songduration});
 
-        HashMap<String, String> tmp1 = new HashMap<String, String>();
-        tmp1.put("name", "Clarity");
-        tmp1.put("duration", "03:14");
-        songlist.add(tmp1);
+
+        makelist("Addicted To A Memory", "05:03");
+        makelist("I Want You To Know", "04:00");
+        makelist("Beautiful Now", "03:38");
+        makelist("Transmission", "04:02");
+        makelist("Done With Love", "04:56");
+        makelist("True Colors", "03:48");
+        makelist("Straight Into The Fire", "03:42");
+        makelist("Papercut", "07:23");
+        makelist("Bumble Bee", "04:08");
+        makelist("Daisy", "02:55");
+        makelist("Illusion", "06:26");
         lv.setAdapter(adapter);
         lv.setDividerHeight(0);
 
@@ -50,6 +61,36 @@ public class MySongActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+    }
+
+    public void makelist(String N, String D){
+        HashMap<String, String> tmp = new HashMap<String, String>();
+        tmp = new HashMap();
+        tmp.put("name", N);
+        tmp.put("duration", D);
+        songlist.add(tmp);
+    }
+
+    public void onClick(View view) {
+        ImageButton ppbtn = (ImageButton) findViewById(R.id.playpause_btn);
+
+        String tag = ppbtn.getTag().toString().trim();
+
+        if(tag.equals("stop"))
+        {
+            ppbtn.setImageResource(R.drawable.ic_stop_white_24dp);
+            ppbtn.setTag("play");
+        }
+        else if(tag.equals("play"))
+        {
+            ppbtn.setImageResource(R.drawable.ic_play_circle_filled_black_24dp);
+            ppbtn.setTag("stop");
+        }
+
     }
 
 
@@ -82,7 +123,11 @@ public class MySongActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.network) {
-
+            Intent intent = new Intent(MySongActivity.this, NetworkActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            finish();
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         } else if (id == R.id.info) {
             Intent intent = new Intent(MySongActivity.this, InfoActivity.class);
             startActivity(intent);
@@ -90,6 +135,8 @@ public class MySongActivity extends AppCompatActivity
         } else if (id == R.id.piano) {
             Intent intent = new Intent(MySongActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            finish();
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 
         }

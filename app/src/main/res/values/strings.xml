@@ -24,4 +24,14 @@
     <string name="rec_start">Recording Start</string>
     <string name="rec_stop">Recording Stop</string>
     <string name="save">SAVE</string>
+    <string name="ver_code" translatable="false">rev7 0.4a</string>
+    <string name="version">Version</string>
+    <string name="staff">Staff</string>
+    <string name="info_override_summary">Project Lead - planning, develop, design</string>
+    <string name="info_override">Yulwon Lee</string>
+    <string name="usersupport" translatable="false">User support</string>
+    <string name="title_activity_network" translatable="false">NetworkActivity</string>
+    <string name="signupdialogue">Signing Up</string>
+    <string name="error_dialogue">Error</string>
+    <string name="error_dialogue_summary">Please chack your network and try again</string>
 </resources>
